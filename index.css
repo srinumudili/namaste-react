@@ -1,3 +1,94 @@
-#heading{
-    color:red;
+body {
+    box-sizing: border-box;
+    font-family:sans-serif;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem 2rem;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+nav{
+    padding: 0.25rem;
+}
+
+nav > .nav-items {
+    display: flex;
+    gap: 1rem; 
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    font-size: 1.25rem; 
+}
+
+.restaurant-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.card-container:hover {
+  transform: scale(1.03);
+}
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card-info {
+  padding: 1rem;
+}
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.card-cuisines {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.card-location {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 0.3rem;
+}
+
+.card-cost {
+  font-size: 0.9rem;
+  color: #222;
+  margin-bottom: 0.3rem;
+}
+
+.card-rating {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.card-rating.good {
+  color: green;
+}
+
+.card-rating.average {
+  color: orange;
 }
