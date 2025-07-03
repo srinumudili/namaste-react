@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "Namaste React by Srinu Mudili",
   "scripts": {
-    "start":"parcel index.html",
-    "build":"parcel build index.html",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
-    
   },
   "repository": {
     "type": "git",
@@ -23,6 +22,8 @@
   },
   "dependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router": "^6.22.3",
+    "react-router-dom": "^6.22.3"
   }
 }

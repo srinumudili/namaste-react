@@ -9,7 +9,7 @@ const RestaurantCard = ({ resData }) => {
     costForTwo,
     cuisines,
     avgRating,
-  } = resData.info;
+  } = resData;
 
   return (
     <div className="card-container">

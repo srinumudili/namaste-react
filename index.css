@@ -28,6 +28,8 @@ body {
   border-radius: 8px;
 }
 
+
+
 .nav-items {
   display: flex;
   gap: 2rem;
@@ -45,19 +47,32 @@ body {
   padding-bottom: 4px;
 }
 
+
 .nav-items li:hover {
   color: #0077cc;
   border-bottom: 2px solid #0077cc;
 }
 
+.nav-items li.no-hover:hover {
+  color: inherit;
+  border-bottom: none;
+}
+.nav-items a {
+  text-decoration: none;
+  color: inherit;
+}
 .restaurant-card-container {
+  max-width: 1200px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  margin: 0 auto;
   gap: 2rem;
   padding: 2rem;
 }
 
 .card-container {
+  max-width: 300px;
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -114,7 +129,82 @@ body {
   color: orange;
 }
 
-.filter-btn{
+.filter{
+  display: flex;
   margin: 10px;
   padding: 2px;
+}
+
+.filter-btn{
+  padding: 2px;
+}
+
+
+
+@keyframes shimmer {
+  0% {
+    background-position: -300px 0;
+  }
+  100% {
+    background-position: 300px 0;
+  }
+}
+
+/* Override for shimmer card layout */
+.shimmer-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  animation: none;
+}
+
+/* Image placeholder */
+.shimmer-image {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  background: linear-gradient(
+    to right,
+    #eeeeee 8%,
+    #dddddd 18%,
+    #eeeeee 33%
+  );
+  background-size: 800px 104px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+/* Generic shimmer lines */
+.shimmer-line {
+  height: 14px;
+  border-radius: 4px;
+  background: linear-gradient(
+    to right,
+    #eeeeee 8%,
+    #dddddd 18%,
+    #eeeeee 33%
+  );
+  background-size: 800px 104px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+.shimmer-line.title {
+  height: 18px;
+  width: 80%;
+}
+
+.shimmer-line.short {
+  width: 60%;
+}
+
+.shimmer-line.medium {
+  width: 70%;
+}
+
+.shimmer-line.small {
+  width: 40%;
 }
